@@ -1,4 +1,4 @@
-getandcleandata <- function() {
+run_analysis <- function() {
   
   set.seed(13)
   
