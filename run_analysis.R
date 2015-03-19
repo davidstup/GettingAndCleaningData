@@ -370,5 +370,7 @@ run_analysis <- function() {
                          frequency_BodyBodyGyroJerkMag_stdev= mean(as.numeric(frequency_BodyBodyGyroJerkMag_stdev), na.rm=TRUE)
                          
   )
+ 
+  write.table(summaryoutput, "run_analysis.txt", row.name=FALSE)
   
 }
