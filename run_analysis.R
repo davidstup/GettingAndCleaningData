@@ -26,6 +26,7 @@ run_analysis <- function() {
   ytrain2 <- merge(ytrain,activity,by = "V1")
   
   ## merge the test data sets
+  ## extract only the metrics that end with mean() or std()
   testoutput <- cbind(xtest[,1],xtest[,2],xtest[,3],xtest[,4],xtest[,5],xtest[,6],
                       xtest[,41],xtest[,42],xtest[,43], xtest[,44], xtest[,45], xtest[,46],
                       xtest[,81], xtest[,82], xtest[,83], xtest[,84], xtest[,85], xtest[,86],
@@ -47,6 +48,7 @@ run_analysis <- function() {
                       subjecttest[,1],
                       "Test")
   ## merge the train data sets
+  ## extract only the metrics that end with mean() or std()
   trainoutput <- cbind(xtrain[,1],xtrain[,2],xtrain[,3],xtrain[,4],xtrain[,5],xtrain[,6],
                        xtrain[,41],xtrain[,42],xtrain[,43], xtrain[,44], xtrain[,45], xtrain[,46],
                        xtrain[,81], xtrain[,82], xtrain[,83], xtrain[,84], xtrain[,85], xtrain[,86],
