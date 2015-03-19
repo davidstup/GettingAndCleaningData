@@ -2,18 +2,21 @@ run_analysis <- function() {
   
   set.seed(13)
   
+  ## read in the test data sets
   xtest <- read.table("C:/Stup/Coursera/UCI HAR Dataset/test/X_test.txt")
   
   ytest <- read.table("C:/Stup/Coursera/UCI HAR Dataset/test/y_test.txt")
   
   subjecttest <- read.table("C:/Stup/Coursera/UCI HAR Dataset/test/subject_test.txt")
   
+  ## read in the activity labels
   activity <- read.table("C:/Stup/Coursera/UCI HAR Dataset/activity_labels.txt")
   
   colnames(activity) <- c("V1","activity")
   
   ytest2 <- merge(ytest,activity,by = "V1")
   
+  ## read in the train data sets
   xtrain <- read.table("C:/Stup/Coursera/UCI HAR Dataset/train/X_train.txt")
   
   ytrain <- read.table("C:/Stup/Coursera/UCI HAR Dataset/train/y_train.txt")
@@ -22,6 +25,7 @@ run_analysis <- function() {
   
   ytrain2 <- merge(ytrain,activity,by = "V1")
   
+  ## merge the test data sets
   testoutput <- cbind(xtest[,1],xtest[,2],xtest[,3],xtest[,4],xtest[,5],xtest[,6],
                       xtest[,41],xtest[,42],xtest[,43], xtest[,44], xtest[,45], xtest[,46],
                       xtest[,81], xtest[,82], xtest[,83], xtest[,84], xtest[,85], xtest[,86],
@@ -42,7 +46,7 @@ run_analysis <- function() {
                       ytest2[,1],
                       subjecttest[,1],
                       "Test")
-  
+  ## merge the train data sets
   trainoutput <- cbind(xtrain[,1],xtrain[,2],xtrain[,3],xtrain[,4],xtrain[,5],xtrain[,6],
                        xtrain[,41],xtrain[,42],xtrain[,43], xtrain[,44], xtrain[,45], xtrain[,46],
                        xtrain[,81], xtrain[,82], xtrain[,83], xtrain[,84], xtrain[,85], xtrain[,86],
@@ -63,7 +67,7 @@ run_analysis <- function() {
                        ytrain2[,1],
                        subjecttrain[,1],
                        "Train")
-  
+  ## rename columns
   colnames(testoutput) <- c(
     "time_BodyAcc_mean_X",
     "time_BodyAcc_mean_Y",
@@ -136,6 +140,7 @@ run_analysis <- function() {
     "source"
   )
   
+  ## rename columns
   colnames(trainoutput) <- c(
     "time_BodyAcc_mean_X",
     "time_BodyAcc_mean_Y",
@@ -208,16 +213,18 @@ run_analysis <- function() {
     "source"
   )
   
-  
+  ## append the test and train data sets
   
   finaloutput <- rbind(testoutput, trainoutput)
   
+  ## add the activity labels
   finaloutput2 <- merge(finaloutput,activity,by="V1" )
   
   library(data.table)
   
   finaloutput3 <- as.data.table(finaloutput2)
   
+  ## convert the metric fields to a numeric data type
   finaloutput3 <- transform(finaloutput3,
                             time_BodyAcc_mean_X = as.numeric(finaloutput[,1]),
                             time_BodyAcc_mean_Y = as.numeric(finaloutput[,2]),
@@ -290,6 +297,7 @@ run_analysis <- function() {
   
   library(plyr)
   
+  ## summarize the metrics (mean) by activity and subject
   summaryoutput <- ddply(finaloutput3, c("activity", "subject"), summarize, 
                          time_BodyAcc_mean_X = mean(as.numeric(time_BodyAcc_mean_X), na.rm=TRUE), 
                          time_BodyAcc_mean_Y = mean(as.numeric(time_BodyAcc_mean_Y), na.rm=TRUE),
