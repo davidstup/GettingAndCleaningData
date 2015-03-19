@@ -3,7 +3,7 @@ This repository is related to the Getting And Cleaning Data Course Project.
 
 README.md in this repository directory lists the script that are used for the tidy data set.  The script is included in this repository and is named:  run_analysis.R.  I have also pasted the R script contents below.
 
-The run_analysis.R script was saved and can be run from my working directory.  This script merges the test and train data sets along with the descriptive data.  The final output of the script is to output (write.table) a .txt named: run_analysis.txt to my working directory.
+The run_analysis.R script was saved and can be run from my working directory.  This script merges the test and train data sets along with the descriptive data (activity descriptions).  The final output of the script is the output (write.table) of a .txt file named: run_analysis.txt to my working directory.
 
 R script code below:
 ---------------------
