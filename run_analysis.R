@@ -69,7 +69,7 @@ run_analysis <- function() {
                        ytrain2[,1],
                        subjecttrain[,1],
                        "Train")
-  ## rename columns
+  ## rename columns from the test data set
   colnames(testoutput) <- c(
     "time_BodyAcc_mean_X",
     "time_BodyAcc_mean_Y",
@@ -142,7 +142,7 @@ run_analysis <- function() {
     "source"
   )
   
-  ## rename columns
+  ## rename columns from the train data set
   colnames(trainoutput) <- c(
     "time_BodyAcc_mean_X",
     "time_BodyAcc_mean_Y",
