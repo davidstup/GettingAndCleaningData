@@ -15,46 +15,48 @@ std(): Standard deviation
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-  "time_BodyAcc_mean_X",
-    "time_BodyAcc_mean_Y",
-    "time_BodyAcc_mean_Z",
-    "time_BodyAcc_stdev_X",
-    "time_BodyAcc_stdev_Y",
-    "time_BodyAcc_stdev_Z",
-    "time_GravityAcc_mean_X",
-    "time_GravityAcc_mean_Y",
-    "time_GravityAcc_mean_Z",
-    "time_GravityAcc_stdev_X",
-    "time_GravityAcc_stdev_Y",
-    "time_GravityAcc_stdev_Z",
-    "time_BodyAccJerk_mean_X",
-    "time_BodyAccJerk_mean_Y",
-    "time_BodyAccJerk_mean_Z",
-    "time_BodyAccJerk_stdev_X",
-    "time_BodyAccJerk_stdev_Y",
-    "time_BodyAccJerk_stdev_Z",
-    "time_BodyGyro_mean_X",
-    "time_BodyGyro_mean_Y",
-    "time_BodyGyro_mean_Z",
-    "time_BodyGyro_stdev_X",
-    "time_BodyGyro_stdev_Y",
-    "time_BodyGyro_stdev_Z",
-    "time_BodyGyroJerk_mean_X",
-    "time_BodyGyroJerk_mean_Y",
-    "time_BodyGyroJerk_mean_Z",
-    "time_BodyGyroJerk_stdev_X",
-    "time_BodyGyroJerk_stdev_Y",
-    "time_BodyGyroJerk_stdev_Z",
-    "time_BodyAccMag_mean",
-    "time_BodyAccMag_stdev",
-    "time_GravityAccMag_mean",
-    "time_GravityAccMag_stdev",
-    "time_BodyAccJerkMag_mean",
-    "time_BodyAccJerkMag_stdev",
-    "time_BodyGyroMag_mean",
-    "time_BodyGyroMag_stdev",
-    "time_BodyGyroJerkMag_mean",
-    "time_BodyGyroJerkMag_stdev",
+Included below is a list of all the variables included in the tidy set. 
+
+  "time_BodyAcc_mean_X - mean time of the X body acc motion
+    "time_BodyAcc_mean_Y - mean time of the Y body acc motion
+    "time_BodyAcc_mean_Z - mean time of the Z body acc motion
+    "time_BodyAcc_stdev_X - std deviation time of the X body acc motion
+    "time_BodyAcc_stdev_Y - std deviation time of the Y body acc motion
+    "time_BodyAcc_stdev_Z - std deviation time of the Z body acc motion
+    "time_GravityAcc_mean_X - mean time of the X gravity acc motion
+    "time_GravityAcc_mean_Y - mean time of the Y gravity acc motion
+    "time_GravityAcc_mean_Z - mean time of the Z gravity acc motion
+    "time_GravityAcc_stdev_X - std deviation time of the X gravity acc motion
+    "time_GravityAcc_stdev_Y - std deviation time of the Y gravity acc motion
+    "time_GravityAcc_stdev_Z - std deviation time of the Z gravity acc motion
+    "time_BodyAccJerk_mean_X - mean time of the X body acc jerk motion
+    "time_BodyAccJerk_mean_Y - mean time of the Y body acc jerk motion
+    "time_BodyAccJerk_mean_Z - mean time of the Z body acc jerk motion
+    "time_BodyAccJerk_stdev_X - std deviation time of the X body acc jerk motion
+    "time_BodyAccJerk_stdev_Y - std deviation time of the Y body acc jerk motion
+    "time_BodyAccJerk_stdev_Z - std deviation time of the Z body acc jerk motion
+    "time_BodyGyro_mean_X - mean time of the X body gyro motion
+    "time_BodyGyro_mean_Y - mean time of the Y body gyro motion
+    "time_BodyGyro_mean_Z - mean time of the Z body gyro motion
+    "time_BodyGyro_stdev_X  - std deviation time of the X body gyro motion
+    "time_BodyGyro_stdev_Y - std deviation time of the Y body gyro motion
+    "time_BodyGyro_stdev_Z - std deviation time of the Z body gyro motion
+    "time_BodyGyroJerk_mean_X - mean time of the X body gyro jerk motion
+    "time_BodyGyroJerk_mean_Y - mean time of the Y body gyro jerk motion
+    "time_BodyGyroJerk_mean_Z - mean time of the Z body gyro jerk motion
+    "time_BodyGyroJerk_stdev_X - std deviation time of the X body gyro jerk motion
+    "time_BodyGyroJerk_stdev_Y - std deviation time of the Y body gyro jerk motion
+    "time_BodyGyroJerk_stdev_Z - std deviation time of the Z body gyro jerk motion
+    "time_BodyAccMag_mean - mean time of the body acc mag motion
+    "time_BodyAccMag_stdev - std deviation time of the body acc mag motion
+    "time_GravityAccMag_mean - mean time of the gravity acc mag motion
+    "time_GravityAccMag_stdev - std deviation time of gravity acc mag motion
+    "time_BodyAccJerkMag_mean - mean time of the body acc jerk mag motion
+    "time_BodyAccJerkMag_stdev - std deviation time of the body acc jerk mag motion
+    "time_BodyGyroMag_mean - mean time of the body gyro motion
+    "time_BodyGyroMag_stdev - std deviation time of the body gyro mag motion
+    "time_BodyGyroJerkMag_mean - mean time of the body gyro jerk mag 
+    "time_BodyGyroJerkMag_stdev - std deviation time of the body gyro jerk mag
     "frequency_BodyAcc_mean_X",
     "frequency_BodyAcc_mean_Y",
     "frequency_BodyAcc_mean_Z",
@@ -81,10 +83,10 @@ These signals were used to estimate variables of the feature vector for each pat
     "frequency_BodyBodyGyroMag_stdev",
     "frequency_BodyBodyGyroJerkMag_mean",
     "frequency_BodyBodyGyroJerkMag_stdev",
-    "activity",
-    "subject",
-    "source"
-    "V1"
+    "activity - includes walking, walking upstairs, walking downstairs, sitting, standing and laying
+    "subject - is the id of the subject/person that the data was collected from 
+    "source - is either test or train (test subject or the training)
+    "V1 - is the activity id
 
 The code book
 1.	The information about the variables (including units) in the data set not contained in the tidy data
