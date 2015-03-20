@@ -3,6 +3,14 @@ This repository is related to the Getting And Cleaning Data Course Project.
 
 README.md in this repository directory lists the script that are used for the tidy data set.  The script is included in this repository and is named:  run_analysis.R.  I have also pasted the R script contents below.
 
+The input data set contains data from human activity recognition using smartphones.
+
+background information about the input data set:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+link to the input data set:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
 The run_analysis.R script was saved and can be run from my working directory.  This script merges the test and train data sets along with the descriptive data (activity descriptions).  The final output of the script is the output (write.table) of a .txt file named: run_analysis.txt to my working directory.
 
 R script code below:
